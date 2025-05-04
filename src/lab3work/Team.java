@@ -55,7 +55,6 @@ public class Team {
         }
     }
 
-
     public boolean isTeamMemberExist(Employee employee) {
         for (Employee e : teamMembers) {
             return (e.equals(employee));

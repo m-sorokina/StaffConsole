@@ -1,0 +1,48 @@
+[18-02-2024 12:02:59] INFO: the employee is added: Dart Weider 40 M
+[18-02-2024 12:02:59] INFO: the employee is added: Adam Mortimer 28 M {SQL, JavaScript, C#}
+[18-02-2024 12:02:59] INFO: the employee is added: Jack Daniels 35 M {HTML, C++}
+[18-02-2024 12:02:59] INFO: the employee is added: Us Among 35 M {}
+[18-02-2024 12:02:59] INFO: the employee is added: Grand Duke 38 M {absolutely all!, guru, the best}
+[18-02-2024 12:02:59] INFO: the employee is added: Dumpty Humpty 45 M {XLST, XML}
+[18-02-2024 12:05:32] INFO: the employee is added: Dart Weider 40 M
+[18-02-2024 12:05:32] INFO: the employee is added: Adam Mortimer 28 M {SQL, JavaScript, C#}
+[18-02-2024 12:05:32] INFO: the employee is added: Jack Daniels 35 M {HTML, C++}
+[18-02-2024 12:05:32] INFO: the employee is added: Us Among 35 M {}
+[18-02-2024 12:05:32] INFO: the employee is added: Grand Duke 38 M {absolutely all!, guru, the best}
+[18-02-2024 12:05:32] INFO: the employee is added: Dumpty Humpty 45 M {XLST, XML}
+[18-02-2024 12:11:44] INFO: the employee is added: Dart Weider 40 M
+[18-02-2024 12:12:15] INFO: the employee is added: Adam Mortimer 28 M {SQL, JavaScript, C#}
+[18-02-2024 12:12:15] INFO: the employee is added: Jack Daniels 35 M {HTML, C++}
+[18-02-2024 12:12:15] INFO: the employee is added: Us Among 35 M {}
+[18-02-2024 12:12:15] INFO: the employee is added: Grand Duke 38 M {absolutely all!, guru, the best}
+[18-02-2024 12:12:15] INFO: the employee is added: Dumpty Humpty 45 M {XLST, XML}
+[04-05-2025 16:18:45] INFO: the employee is added: Dart Weider 40 M
+[04-05-2025 16:18:45] INFO: the employee is added: Adam Mortimer 28 M {SQL, JavaScript, C#}
+[04-05-2025 16:18:45] INFO: the employee is added: Jack Daniels 35 M {HTML, C++}
+[04-05-2025 16:18:45] INFO: the employee is added: Us Among 35 M {}
+[04-05-2025 16:18:45] INFO: the employee is added: Grand Duke 38 M {absolutely all!, guru, the best}
+[04-05-2025 16:18:45] INFO: the employee is added: Dumpty Humpty 45 M {XLST, XML}
+[04-05-2025 16:32:11] INFO: the employee is added: Dart Weider 40 M
+[04-05-2025 16:32:11] INFO: the employee is added: Adam Mortimer 28 M {SQL, JavaScript, C#}
+[04-05-2025 16:32:11] INFO: the employee is added: Jack Daniels 35 M {HTML, C++}
+[04-05-2025 16:32:11] INFO: the employee is added: Us Among 35 M {}
+[04-05-2025 16:32:11] INFO: the employee is added: Grand Duke 38 M {absolutely all!, guru, the best}
+[04-05-2025 16:32:11] INFO: the employee is added: Dumpty Humpty 45 M {XLST, XML}
+[04-05-2025 16:32:53] INFO: the employee is added: Dart Weider 40 M
+[04-05-2025 16:32:53] INFO: the employee is added: Adam Mortimer 28 M {SQL, JavaScript, C#}
+[04-05-2025 16:32:53] INFO: the employee is added: Jack Daniels 35 M {HTML, C++}
+[04-05-2025 16:32:53] INFO: the employee is added: Us Among 35 M {}
+[04-05-2025 16:32:53] INFO: the employee is added: Grand Duke 38 M {absolutely all!, guru, the best}
+[04-05-2025 16:32:53] INFO: the employee is added: Dumpty Humpty 45 M {XLST, XML}
+[04-05-2025 16:33:44] INFO: the employee is added: Dart Weider 40 M
+[04-05-2025 16:33:44] INFO: the employee is added: Adam Mortimer 28 M {SQL, JavaScript, C#}
+[04-05-2025 16:33:44] INFO: the employee is added: Jack Daniels 35 M {HTML, C++}
+[04-05-2025 16:33:44] INFO: the employee is added: Us Among 35 M {}
+[04-05-2025 16:33:44] INFO: the employee is added: Grand Duke 38 M {absolutely all!, guru, the best}
+[04-05-2025 16:33:44] INFO: the employee is added: Dumpty Humpty 45 M {XLST, XML}
+[04-05-2025 16:34:04] INFO: the employee is added: Dart Weider 40 M
+[04-05-2025 16:34:04] INFO: the employee is added: Adam Mortimer 28 M {SQL, JavaScript, C#}
+[04-05-2025 16:34:04] INFO: the employee is added: Jack Daniels 35 M {HTML, C++}
+[04-05-2025 16:34:04] INFO: the employee is added: Us Among 35 M {}
+[04-05-2025 16:34:04] INFO: the employee is added: Grand Duke 38 M {absolutely all!, guru, the best}
+[04-05-2025 16:34:04] INFO: the employee is added: Dumpty Humpty 45 M {XLST, XML}

@@ -1,9 +1,10 @@
 package lab3work;
 
-public class ConsoleLogger {
+public class ConsoleLogger implements Logger {
     String log;
 
     public ConsoleLogger(String log){
+
         this.log = log;
     }
 

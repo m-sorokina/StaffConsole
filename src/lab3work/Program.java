@@ -9,9 +9,11 @@ public class Program {
 
     public static void main(String[] args) {
 
+
         Company company = createCompany();
         if (company != null) {
             addCompanyEmployeeByDefault(company);
+            company.printCompanyEmployees();
             int operationSelect = callMenu();
             while (operationSelect != 9) {
                 in.nextLine();
@@ -32,7 +34,7 @@ public class Program {
                     case 8 -> groupEmployeeByTeam(company);
                     default -> System.out.println("\nOperation with such number doesn't exist");
                 }
-//                System.out.println(company);
+                company.printCompanyEmployees();
                 operationSelect = callMenu();
             }
         } else {
@@ -61,6 +63,16 @@ public class Program {
         return in.nextInt();
     }
 
+    public static Company createCompany() {
+        System.out.print("Enter company's name (press \"Enter\" to end): ");
+        String companyName = in.nextLine();
+
+        if (companyName.isBlank()) return null;
+
+        return new Company(companyName);
+
+    }
+
     public static void addCompanyEmployeeByDefault(Company company) {
         Employee[] employees = new Employee[6];
         employees[0] = new Manager("Weider", "Dart", 40, "m", 9500, Position.MANAGER);
@@ -73,15 +85,6 @@ public class Program {
             company.addEmployee(employee);
         }
 
-    }
-
-    public static Company createCompany() {
-        System.out.print("Enter company's name (press \"Enter\" to end): ");
-        String companyName = in.nextLine();
-
-        if (companyName.isBlank()) return null;
-
-        return new Company(companyName);
     }
 
     public static void addCompanyEmployees(Company company) {

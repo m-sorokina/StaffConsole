@@ -5,14 +5,18 @@ import java.util.ArrayList;
 public class Company {
     private final String companyName;
     private final ArrayList<Employee> employees;
-    private final ConsoleLogger logger;
+    private Logger logger;
     private final ArrayList<Team> teams;
+    private Logger fileInfoLogs = new FileLogger("company_info_log.txt", true, false);
+    private Logger fileErrorLogs = new FileLogger("company_error_log.txt", false, true);
+    private Logger fileAllLogs = new FileLogger("company_all_logs.txt", false, false);
+    private Logger[] loggers = new Logger[]{fileAllLogs, fileErrorLogs, fileInfoLogs};
 
     public Company(String companyName) {
         this.companyName = companyName;
         employees = new ArrayList<>();
-        logger = new ConsoleLogger(null);
         teams = new ArrayList<>();
+        this.logger = new MultiLogger(loggers);
     }
 
     public Employee getCompanyEmployee(int index) {
@@ -54,19 +58,19 @@ public class Company {
         return false;
     }
 
-    public boolean changeEmployeeSalary(int index, double salary) {
+    public boolean addEmployeeSkills(int index, String skill) {
         if (checkIndexOfEmployee(index)) {
-            Employee employee = employees.get(index);
-            employee.setSalary(salary);
+            Developer employee = (Developer) employees.get(index);
+            employee.addDeveloperSkill(skill);
             return true;
         }
         return false;
     }
 
-    public boolean addEmployeeSkills(int index, String skill) {
+    public boolean changeEmployeeSalary(int index, double salary) {
         if (checkIndexOfEmployee(index)) {
-            Developer employee = (Developer) employees.get(index);
-            employee.addDeveloperSkill(skill);
+            Employee employee = employees.get(index);
+            employee.setSalary(salary);
             return true;
         }
         return false;
@@ -132,12 +136,12 @@ public class Company {
     }
 
     public void printCompanyEmployees() {
-        String company = "\nCompany \"" + companyName + "\":\n";
+        String company = "\nCompany \"" + companyName + "\":\nList of employees:\n";
         int n = 0;
-        System.out.printf("%s%n%8s%2s%10s%3s%34s%26s%6s%4s%8s%2s%10s%2s%8s%n",
+        System.out.printf("%s%n%8s%2s%10s%3s%34s%26s%6s%4s%12s%2s%20s%2s%10s%2s%8s%n",
                 company, "Number", "|", "Position", "|", "Employee", "|",
-                "Team", "|", "Salary", "|", "Team size", "|", "Index |");
-        System.out.printf("%s%n", "-".repeat(123));
+                "Team", "|", "Salary nett", "|","Salary with bonuses","|", "Team size", "|", "Index |");
+        System.out.printf("%s%n", "-".repeat(148));
         for (Employee employee : employees) {
             String teamSize = "";
             String teamName = "";
@@ -147,8 +151,8 @@ public class Company {
                     teamSize = String.valueOf(((Manager) employee).getTeamSize());
                 }
             }
-            System.out.printf("%5d\t%2s%-10s%3s%-58s%2s%8s%2s%8.1f%2s%6s%6s%4s%4s%n", ++n,
-                    "|", employee.getPosition(), "|", employee, "|", teamName, "|", employee.getTotalSalary(), "|", teamSize, "|",
+            System.out.printf("%5d\t%2s%-10s%3s%-58s%2s%8s%2s%12.1f%2s%20.1f%2s%6s%6s%4s%4s%n", ++n,
+                    "|", employee.getPosition(), "|", employee, "|", teamName, "|", employee.getSalary(), "|", employee.getTotalSalary(), "|", teamSize, "|",
                     (employees.indexOf(employee) + 1), "|");
         }
 

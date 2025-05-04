@@ -10,8 +10,8 @@ public abstract class Employee {
     private int teamID;
 
 
-     public Employee(String lastname, String firstname, int age,
-                     String sexEmployee, double salary, Position position) {
+    public Employee(String lastname, String firstname, int age,
+                    String sexEmployee, double salary, Position position) {
         this.lastname = lastname;
         this.firstname = firstname;
         this.age = age;
@@ -21,15 +21,8 @@ public abstract class Employee {
         teamID = 0;
     }
 
-    public Position getPosition(){
-         return position;
-    }
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
-
     public String toString() {
-                return String.join(" ", this.firstname,
+        return String.join(" ", this.firstname,
                 this.lastname,
                 Integer.toString(this.age),
                 (sexEmployee == Sex.MALE) ? "M" : "F");
@@ -43,17 +36,28 @@ public abstract class Employee {
                 && this.sexEmployee == employee.sexEmployee);
     }
 
-    public double getSalary(){
+    public double getSalary() {
         return salary;
 
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public abstract double getTotalSalary();
+
+    public Position getPosition() {
+        return position;
+    }
+
+    public int getTeam() {
+        return teamID;
     }
 
     public void setTeam(int ID) {
         teamID = ID;
     }
-    public int getTeam() {
-        return teamID;
-    }
-    public abstract double getTotalSalary();
+
 
 }

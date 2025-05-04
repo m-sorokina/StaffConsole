@@ -10,13 +10,14 @@ public class Developer extends Employee {
 
     }
 
-    public void addDeveloperSkill(String skill){
+    public void addDeveloperSkill(String skill) {
         String skills = String.join(",", this.skills) + "," + skill;
         this.skills = skills.trim().split("\\s+,\\s+|,\\s+|\\s+,|,");
     }
+
     @Override
     public String toString() {
-        String skillsToPrint = " {" + String.join(", ", this.skills)  + "}";
+        String skillsToPrint = " {" + String.join(", ", this.skills) + "}";
         return super.toString() + skillsToPrint;
     }
 
@@ -28,6 +29,12 @@ public class Developer extends Employee {
     @Override
     public double getSalary() {
         return super.getSalary();
+    }
+
+    @Override
+    public double getTotalSalary() {
+        double bonus = (0.02 * getSalary()) * skills.length;
+        return getSalary() + bonus;
     }
 
     @Override
@@ -45,9 +52,4 @@ public class Developer extends Employee {
         super.setTeam(ID);
     }
 
-    @Override
-    public double getTotalSalary() {
-        double bonus = (0.02 * getSalary()) * skills.length;
-        return getSalary() + bonus;
-    }
 }

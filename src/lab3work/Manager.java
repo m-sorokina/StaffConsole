@@ -14,17 +14,7 @@ public class Manager extends Employee {
         teamSize = 0;
     }
 
-    @Override
-    public void setSalary(double salary) {
-        super.setSalary(salary);
-    }
 
-    public int getTeamSize() {
-        return teamSize;
-    }
-    public void setTeamSize(int teamSize) {
-        this.teamSize = teamSize - 1;
-    }
     @Override
     public String toString() {
         return super.toString();
@@ -38,6 +28,18 @@ public class Manager extends Employee {
     @Override
     public double getSalary() {
         return super.getSalary();
+    }
+
+    @Override
+    public void setSalary(double salary) {
+        super.setSalary(salary);
+    }
+
+    @Override
+    public double getTotalSalary() {
+        int bonusRate = teamSize / 5;
+        double bonus = (0.05 * getSalary()) * bonusRate;
+        return getSalary() + bonus;
     }
 
     @Override
@@ -55,10 +57,13 @@ public class Manager extends Employee {
         return super.getTeam();
     }
 
-    @Override
-    public double getTotalSalary() {
-        int bonusRate = teamSize / 5;
-        double bonus = (0.05 * getSalary()) * bonusRate;
-        return getSalary() + bonus;
+    public int getTeamSize() {
+        return teamSize;
     }
+
+    public void setTeamSize(int teamSize) {
+        this.teamSize = teamSize - 1;
+    }
+
+
 }
